@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class User {
+    private int id;
     private int WalletAmount;
     public static int Fees;
     private String email;
@@ -15,12 +16,15 @@ public class User {
     private Wallet wallets;
 //    private Services s;
 
-    public User(String em,String pass, String user, Wallet wall,int Fee){
-        setEmail(em);
-        setPassword(pass);
-        setUsername(user);
-        setWallets(wall);
-        Fees = Fee;
+    public User(String email,String password, String username, int id){
+        this.email = email;
+        this.password = password;
+        this.username = username;
+        //setWallets(wall);
+        //Fees = Fee;
+        this.id = id;
+
+        Wallet wallets = new Wallet();
 
     }
 
@@ -58,27 +62,15 @@ public class User {
         WalletAmount = walletAmount;
     }
 
-
-
-    public void PayAmount(Payment py) {
-        py.Pay(Fees);
+    public void setId(int id) {
+        this.id = id;
     }
-
-    public void InsertInWallet(CreditCardBsl cc, int WalletAmount) {
-
-        cc.insertInWallet(WalletAmount);
+    public int getId(){
+        return id;
     }
-    public void check_wallet_money() {
-
-        wallets.check_wallet_money();
+    public String PayAmount(Payment py) {
+        return Fees+py.Pay(Fees);
     }
-//    public void UserSearch(Search sc) {
-//        sc.show_services_type();
-//
-//    }
-//    public void RequestRefund(Refund rf) {
-//        rf.requestRefund(Fees, username, s);
-//    }
 
 
 }

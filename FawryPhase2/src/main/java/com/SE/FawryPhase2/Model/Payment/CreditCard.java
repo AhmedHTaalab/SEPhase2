@@ -7,9 +7,10 @@ import java.lang.String;
 @Component
 public class CreditCard implements Payment {
 
-    private String cardNumber;
+    private String card;
     private String cvv;
-    private String dateOfExpiry;
+    private String date;
+    private int id;
 
 //    public CreditCard(String cN, String cv, String date) {
 //     this.cardNumber=cN;
@@ -18,16 +19,16 @@ public class CreditCard implements Payment {
 //    }
 
     public String getCardNumber() {
-        return cardNumber;
+        return card;
     }
     public void setCardNumber(String cardNumber) {
-        this.cardNumber = cardNumber;
+        this.card = cardNumber;
     }
     public String getDateOfExpiry() {
-        return dateOfExpiry;
+        return date;
     }
     public void setDateOfExpiry(String dateOfExpiry) {
-        this.dateOfExpiry = dateOfExpiry;
+        this.date = dateOfExpiry;
     }
     public String getCvv() {
         return cvv;
@@ -35,10 +36,12 @@ public class CreditCard implements Payment {
     public void setCvv(String cvv) {
         this.cvv = cvv;
     }
+    public int getId(){return id;}
+    public void setId(int id){this.id=id;}
     @Override
     public String Pay(int amount) {
 
-        return  " paid with Credit Card";
+        return  " paid with Credit Card ";
     }
 
 

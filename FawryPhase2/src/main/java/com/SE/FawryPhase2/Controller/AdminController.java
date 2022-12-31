@@ -3,6 +3,7 @@ package com.SE.FawryPhase2.Controller;
 import com.SE.FawryPhase2.Bsl.CashBsl;
 import com.SE.FawryPhase2.Bsl.CreditCardBsl;
 import com.SE.FawryPhase2.Bsl.WalletBsl;
+import com.SE.FawryPhase2.Model.Payment.CreditCard;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -19,9 +20,12 @@ public class AdminController {
         this.WalletLogic = new  WalletBsl();
     }
 
-    public ArrayList<String> getCreditCardBsl() {
-        return this.CreditLogic.getTransactions();
+    public ArrayList<CreditCard> getCreditCardBsl() {
+        return this.CreditLogic.getcredit();
     }
+//    public ArrayList<String> getCreditCardBsl() {
+//        return this.CreditLogic.getTransactions();
+//    }
     public ArrayList<String> getCashBsl() {
         return this.CashLogic.getTransactions();
     }

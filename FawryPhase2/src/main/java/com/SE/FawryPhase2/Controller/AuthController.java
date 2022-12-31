@@ -1,9 +1,10 @@
 package com.SE.FawryPhase2.Controller;
 
 import com.SE.FawryPhase2.Bsl.authentication;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Scanner;
-
+@RestController
 public class AuthController{
 
     String user_name , password ,Status;

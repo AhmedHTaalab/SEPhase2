@@ -1,13 +1,16 @@
 package com.SE.FawryPhase2.Bsl;
 
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
+@Service
 public class authentication
 {
     public static int count = 0;
     public int userID=1;
 
-    ArrayList<String> userName = new ArrayList<String>() ;
-    ArrayList<String> Pssword = new ArrayList<String>() ;
+    public ArrayList<String> userName = new ArrayList<String>() ;
+    public ArrayList<String> Pssword = new ArrayList<String>() ;
 
     public String Sign_up(String U,String P) {
         String str = "", ans;

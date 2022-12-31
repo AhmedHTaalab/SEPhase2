@@ -9,7 +9,7 @@ public class CashOnDelivery implements Payment{
 
     @Override
     public String Pay(int amount) {
-        return " paid with Cash";
+        return " paid with Cash ";
     }
 
 }

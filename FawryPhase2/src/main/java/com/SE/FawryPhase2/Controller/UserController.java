@@ -3,12 +3,10 @@ package com.SE.FawryPhase2.Controller;
 import com.SE.FawryPhase2.Bsl.CreditCardBsl;
 import com.SE.FawryPhase2.Bsl.UserBsl;
 import com.SE.FawryPhase2.Model.Payment.Wallet;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.SE.FawryPhase2.Model.User;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("user/")
 public class UserController {
 
     private UserBsl userbsl;
@@ -28,18 +26,41 @@ public class UserController {
     }
 
 
+//    @GetMapping("/user/Insert")
+//    public int InsertInWallet(@RequestParam (value = "Credit", required = false) CreditCardBsl Credit,@RequestParam("Amount") int Amount) {
+//
+//        return Credit.insertInWallet(Amount);
+//    }
 
-    public void InsertInWallet(CreditCardBsl cc, int WalletAmount) {
+    @PostMapping("/user/Insert")
+    public int InsertInWallet(@RequestBody CreditCardBsl Credit,@RequestBody int Amount) {
 
-        cc.insertInWallet(WalletAmount);
+        return Credit.insertInWallet(Amount);
     }
-    public void check_wallet_money(Wallet wallets) {
+    @GetMapping("/user/Wallet")
+    public int check_wallet_money(Wallet wallets) {
 
-        wallets.check_wallet_money();
+        return wallets.check_wallet_money();
+    }
+    @PostMapping(value = "/user")
+    public  String AddUser(@RequestBody User user){
+        return userbsl.add(user);
+    }
+    @GetMapping(value = "/user/{id}/payCredit")
+    public String UserPayment1(@PathVariable("id") int id) {
+        return userbsl.PayAmount1(id);
+    }
+    @GetMapping(value = "/user/{id}/payWallet")
+    public String UserPayment2(@PathVariable("id") int id) {
+        return userbsl.PayAmount2(id);
+    }
+    @GetMapping(value = "/user/{id}/payCash")
+    public String UserPayment3(@PathVariable("id") int id) {
+        return userbsl.PayAmount3(id);
+    }
+    @GetMapping(value = "/user/{id}")
+    public User getUser(@PathVariable("id") int id){
+        return userbsl.getUser(id);
     }
 
-   @GetMapping("test")
-    public String Test() {
-        return "Test";
-    }
 }

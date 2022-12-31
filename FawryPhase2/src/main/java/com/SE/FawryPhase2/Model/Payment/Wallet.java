@@ -31,7 +31,7 @@ public class Wallet implements Payment {
 
         if(Wamount >= amount) {
             Wamount = Wamount - amount;
-            return " Paid with Wallet";
+            return " Paid with Wallet ";
 
         }
         else {
