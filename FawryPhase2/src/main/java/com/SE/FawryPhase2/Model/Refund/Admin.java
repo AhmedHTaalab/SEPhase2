@@ -10,11 +10,11 @@ public class Admin {
     private int id;
     private String email;
 
-    public Admin(String name, int id, String email) {
-        this.name = name;
-        this.id = id;
-        this.email = email;
-    }
+//    public Admin(String name, int id, String email) {
+//        this.name = name;
+//        this.id = id;
+//        this.email = email;
+//    }
 
     public void confirmRefund(RefundBsl refundbsl) {
         Scanner sc = new Scanner(System.in);

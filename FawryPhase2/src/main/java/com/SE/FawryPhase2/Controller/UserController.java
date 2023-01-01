@@ -38,7 +38,7 @@ public class UserController {
         return Credit.insertInWallet(Amount);
     }
     @GetMapping("/user/Wallet")
-    public int check_wallet_money(Wallet wallets) {
+    public int check_wallet_money(@RequestBody Wallet wallets) {
 
         return wallets.check_wallet_money();
     }

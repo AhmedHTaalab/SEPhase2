@@ -37,6 +37,9 @@ public class ServiceBL {
 			}
 
 		};
+		obj.set_Types(type);
+		obj.setID(id);
+		obj.setAmount(amount);
 
 		SERVICES.add(obj);
 

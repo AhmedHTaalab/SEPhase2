@@ -7,17 +7,17 @@ import org.springframework.stereotype.Component;
 public class Refund {
     private int amount;
     private User user;
-    private com.SE.FawryPhase2.Model.Service.service service;
+    private service service;
 
     private boolean isConfirmed;
 
-    public Refund(int amount, User user, service service) {
-
-        this.amount = amount;
-        this.user = user;
-        this.service = service;
-
-    }
+//    public Refund(int amount, User user, service service) {
+//
+//        this.amount = amount;
+//        this.user = user;
+//        this.service = service;
+//
+//    }
 
     public User getUser() {
         return user;

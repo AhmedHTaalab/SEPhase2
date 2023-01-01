@@ -14,15 +14,15 @@ public class RefundBsl{
     private Refund refund;
     private List<Admin> admins = new ArrayList<>();
 
-    public RefundBsl(int amount, User user, service service){
-        refund = new Refund(amount, user, service);
-    }
-    public RefundBsl(Refund refund){
-        this.refund = refund;
-    }
-    public void addAdmin(String name, int Id, String email) {
-        admins.add(new Admin(name, Id, email));
-    }
+//    //public RefundBsl(int amount, User user, service service){
+//        refund = new Refund(amount, user, service);
+//    }
+//    public RefundBsl(Refund refund){
+//        this.refund = refund;
+//    }
+//    public void addAdmin(String name, int Id, String email) {
+//        admins.add(new Admin(name, Id, email));
+//    }
 
     public void requestRefund(RefundBsl refundbsl) {
         this.refund = refundbsl.getRefund();
