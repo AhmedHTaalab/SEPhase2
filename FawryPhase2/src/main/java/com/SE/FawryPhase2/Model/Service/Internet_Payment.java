@@ -6,12 +6,12 @@ import org.springframework.stereotype.Component;
 public class Internet_Payment extends service {
 
 	public Internet_Payment()
-	{
-		amount = 15;
+	{   setID(2);
+		setAmount(15);
 		Types.add("Vodafone");
 		Types.add("Etisalat");
 		Types.add("Orange");
 		Types.add("We");
 	}
-	
+
 }

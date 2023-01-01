@@ -6,11 +6,11 @@ import org.springframework.stereotype.Component;
 public class Donation extends service
 {
 	public Donation()
-	{  amount=5;
+	{   setID(4);
+		setAmount(5);
 		Types.add("Cancer Hospital");
 		Types.add("Schools");
 		Types.add("NGOs");
 	}
 
 }
-

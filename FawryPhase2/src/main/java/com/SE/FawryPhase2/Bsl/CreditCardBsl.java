@@ -2,7 +2,6 @@ package com.SE.FawryPhase2.Bsl;
 
 import com.SE.FawryPhase2.Model.Payment.CreditCard;
 import com.SE.FawryPhase2.Model.Payment.Wallet;
-import com.SE.FawryPhase2.Model.User;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

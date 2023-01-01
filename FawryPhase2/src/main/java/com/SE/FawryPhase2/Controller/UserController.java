@@ -3,7 +3,7 @@ package com.SE.FawryPhase2.Controller;
 import com.SE.FawryPhase2.Bsl.CreditCardBsl;
 import com.SE.FawryPhase2.Bsl.UserBsl;
 import com.SE.FawryPhase2.Model.Payment.Wallet;
-import com.SE.FawryPhase2.Model.User;
+import com.SE.FawryPhase2.Model.Refund.User;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

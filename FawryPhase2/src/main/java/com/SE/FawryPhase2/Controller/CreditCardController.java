@@ -2,7 +2,6 @@ package com.SE.FawryPhase2.Controller;
 
 import com.SE.FawryPhase2.Bsl.CreditCardBsl;
 import com.SE.FawryPhase2.Model.Payment.CreditCard;
-import com.SE.FawryPhase2.Model.User;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;

@@ -4,11 +4,10 @@ import com.SE.FawryPhase2.Model.Payment.CashOnDelivery;
 import com.SE.FawryPhase2.Model.Payment.CreditCard;
 import com.SE.FawryPhase2.Model.Payment.Payment;
 import com.SE.FawryPhase2.Model.Payment.Wallet;
-import com.SE.FawryPhase2.Model.User;
+import com.SE.FawryPhase2.Model.Refund.User;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.List;
 
 @Service
 public class UserBsl {
